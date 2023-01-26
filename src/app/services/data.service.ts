@@ -14,7 +14,6 @@ export class DataService {
   private _results: DataInterface[] = [];
   public names: string[] = [];
   public population: number[] = [];
-  public continent: string = 'World';
 
   private _refreshRequired: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
   get RefreshRequired() {
@@ -45,7 +44,6 @@ export class DataService {
 
     if(continent !== 'World') {
       this._data = this.getDataByContinent(continentsObject, continent);
-      this.continent = continent;
     } else {
       this._data = this.getDataContinents(continentsObject, continents);
     }
