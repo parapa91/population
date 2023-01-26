@@ -1,0 +1,30 @@
+<div class="container-bar">
+  <mat-toolbar class="bar">
+    <mat-toolbar-row>
+      <button (click)="sidenav.toggle()" mat-icon-button>
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span class="spacer">
+        Population
+      </span>
+
+      <div *ngFor="let desc of menus">
+        <a routerLink="{{desc.toLowerCase()}}" mat-button>
+          <mat-icon size="small">language</mat-icon>{{desc}}
+        </a>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-sidenav-container class="content">
+    <mat-sidenav #sidenav>
+      <div *ngFor="let desc of menus">
+        <a routerLink="{{desc.toLowerCase()}}" mat-button>
+          <mat-icon size="small">language</mat-icon>{{desc}}
+        </a>
+      </div>
+    </mat-sidenav>
+    <mat-sidenav-content class="padding-50">
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

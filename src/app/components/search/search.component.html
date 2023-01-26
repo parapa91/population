@@ -1,0 +1,9 @@
+  <mat-form-field>
+    <mat-label>Search by population:</mat-label>
+    <input
+      matInput
+      type="number"
+      min="0"
+      placeholder="Enter to search..."
+      (keyup.enter)="searchByPopulation($any($event.target).value)">
+  </mat-form-field>
