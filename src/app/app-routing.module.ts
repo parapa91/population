@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PopulationComponent } from 'src/app/population/population.component';
+import { PopulationComponent } from 'src/app/components/population/population.component';
 const routes: Routes = [
   { path: "world", component: PopulationComponent, data: {continent: 'World'} },
   { path: "africa", component: PopulationComponent, data: {continent: 'Africa'}},

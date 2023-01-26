@@ -15,7 +15,7 @@ import { AppComponent } from './app.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { SearchComponent } from './components/search/search.component';
 import { ResultsComponent } from './components/results/results.component';
-import { PopulationComponent } from './population/population.component';
+import { PopulationComponent } from './components/population/population.component';
 import { DataService } from './services/data.service';
 
 @NgModule({
